@@ -127,7 +127,7 @@ footer{
 .mainWrap{
   display: grid;
   grid-template-columns: 230px 1fr;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 
@@ -172,13 +172,19 @@ footer{
   margin-top: 20px;
   width: 100%;
   transition: all 0.3s ease-in-out;
+  background-color: rgb(252, 66, 66);
+}
+.leaveBtn:hover{
+  background-color: rgb(185, 55, 55);
 }
 .editorWrap{
   background: whitesmoke;
 }
 #realTimeEditor{
-  height: 500px;
-  width: 90%;
-  font-size: 20px;
-  line-height: 1.5px;
+ min-height: calc(100vh - 20px);
+ font-size: 20px;
+ line-height: 1.6;
+ padding-top: 20px;
+ width: 90%;
+  /* line-height: 1.5px; */
 }
