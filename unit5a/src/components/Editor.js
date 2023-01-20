@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 // import Codemirror from 'codemirror'
 // import 'codemirror/mode/javascript/javascript'
 // import {EditorState} from "@codemirror/state"
@@ -7,6 +7,15 @@ import React from "react";
 // import {EditorView} from "@codemirror/view"
 
 const Editor=()=>{
+    // const editorRef=useRef(null)
+
+    // useEffect(()=>{
+           
+    //       editorRef.current.on('change',(instance,changes)=>{
+    //         console.log('changes',changes)
+    //       })
+
+    // },[])
     // let view = new EditorView({
     //     extensions: EditorView.theme({
     //       ".cm-content": {color: "darkorange"},
