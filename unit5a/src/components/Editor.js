@@ -7,7 +7,7 @@ import React, { useEffect, useRef } from "react";
 // import {EditorView} from "@codemirror/view"
 
 const Editor=()=>{
-    // const editorRef=useRef(null)
+      const editorRef=useRef(null)
 
     // useEffect(()=>{
            
@@ -32,6 +32,15 @@ const Editor=()=>{
     //     }
     //     init()
     // },[])
+
+    useEffect(()=>{
+              async function init(){
+
+                
+
+              };
+              init()
+    },[])
 
     return <textarea id="realTimeEditor"></textarea>
 }
