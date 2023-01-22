@@ -1,7 +1,6 @@
 {
   "name": "unit5a",
   "version": "0.1.0",
-  "main":"server.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
