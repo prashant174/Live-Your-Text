@@ -7,6 +7,7 @@ const app=express()
 
 const server=http.createServer(app)
 const io=new Server(server);
+app.use(express.static('build'));
 
 const userSocketMap={}
 function getAllConnectedClients(roomId){
@@ -41,7 +42,12 @@ io.on('connection',(socket)=>{
             socketId:socket.id,
         })
        })
-       console.log(clients,'g')
+    
+    })
+
+    socket.on(ACTIONS.CODE_CHANGE,({roomId,code})=>{
+        // console.log('check',code)
+        socket.in(roomId).emit(ACTIONS.CODE_CHANGE,{code})
     })
 
       socket.on('disconnecting',()=>{

@@ -41,7 +41,7 @@
 
 
 .homePageWrapper{
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,6 +94,7 @@ footer{
   padding: 10px;
   border-radius: 4px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
@@ -180,11 +181,10 @@ footer{
 .editorWrap{
   background: whitesmoke;
 }
-#realTimeEditor{
- min-height: calc(100vh - 20px);
- font-size: 20px;
- line-height: 1.6;
- padding-top: 20px;
- width: 90%;
-  /* line-height: 1.5px; */
+
+.CodeMirror{
+  font-size: 20px;
+  min-height: calc(100vh - 470px);
+  line-height: 1.6;
+  padding-top: 20px;
 }

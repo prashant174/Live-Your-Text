@@ -38,6 +38,7 @@ const EditorPage=()=>{
                   console.log(`${username} joined`)
                 }
                 setClients(clients)
+               
  
                })
 
@@ -57,7 +58,23 @@ const EditorPage=()=>{
         //  }
       },[])
     
+
+      async function copyRoomId(){
+        try{
+      await navigator.clipboard.writeText(roomId);
+      toast.success('Copied Successfully to Clipboard')
+        }
+        catch(err){
+          
+          toast.error('Failed to Copy')
+          console.log(err)
+        }
+      }
    
+      function leaveRoom(){
+        reactNavigator('/')
+      }
+
     if(!location.state){
         return <Navigate to="/" />
     }
@@ -77,12 +94,12 @@ return <div className="mainWrap">
          }
         </div>
       </div>
-      <button className="btn copyBtn">Copy Room ID</button>
-      <button className="btn leaveBtn">Leave</button>
+      <button className="btn copyBtn" onClick={copyRoomId}>Copy Room ID</button>
+      <button className="btn leaveBtn" onClick={leaveRoom} >Leave</button>
     </div>
 
     <div className="editorWrap">
-        <Editor/>
+        <Editor socketRef={socketRef} roomId={roomId} />
     </div>
 </div>
 
