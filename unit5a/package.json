@@ -23,8 +23,7 @@
   "scripts": {
     "server:dev": "nodemon server.js",
     "server:prod": "node server.js",
-    "start:front": "react-scripts start",
-    "start": "npm build && npm server:prod",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
