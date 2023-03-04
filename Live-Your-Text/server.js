@@ -8,10 +8,6 @@ const app=express()
 
 const server=http.createServer(app)
 const io=new Server(server);
-app.use(express.static(path.join('build')));
-app.use((req,res,next)=>{
-   res.sendFile(path.join(__dirname,'build','index.html'))
-})
 
 const userSocketMap={}
 function getAllConnectedClients(roomId){
@@ -68,9 +64,13 @@ io.on('connection',(socket)=>{
 
 })
 
+app.use(express.static(path.join(__dirname,'build')))
 
+app.get("*", function(req,res){
+    res.sendFile(path.join(__dirname,"build/index.html"))
+})
 
-const port=process.env.PORT||8080
+const port=5000
 server.listen(port,()=>{
     console.log(`listening on Port ${port}`)
 })
