@@ -1,7 +1,7 @@
 # Budget-tracking-application
 It helps Developers to code combined on live both can code on a same page and CRUD it
 For using this, user have to create new room and enter it.
-Live link:- https://wondrous-biscuit-d5ba9b.netlify.app/
+Live link:- celebrated-sprite-352472.netlify.app/
 ## Page implemented
 
 - Home page
